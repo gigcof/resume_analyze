@@ -6,7 +6,7 @@ const uploadDataAndGenerateResponse = async (req, res) => {
     try {
         const { jobTitle, jobDescription } = req.body || {};
         const resumeData = await readData({ bufferData: req.file?.buffer });
-
+        console.log('hiiii');
         // send this data to AI and await response
         await openAi.chat.completions.create();
     } catch (err) {
